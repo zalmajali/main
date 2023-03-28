@@ -7,9 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule, HttpClient} from "@angular/common/http";
 import { IonicStorageModule } from '@ionic/storage';
 
-import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { Network } from '@ionic-native/network/ngx';
-import { Facebook } from '@ionic-native/facebook/ngx';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Globalization } from '@ionic-native/globalization/ngx';
@@ -37,7 +35,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },CallNumber,GooglePlus,Network,SplashScreen,Facebook,Globalization,FileTransfer,File,Chooser,FilePath,InAppBrowser,HTTP,FileOpener],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },CallNumber,Network,SplashScreen,Globalization,FileTransfer,File,Chooser,FilePath,InAppBrowser,HTTP,FileOpener],
   bootstrap: [AppComponent],
 })
 
