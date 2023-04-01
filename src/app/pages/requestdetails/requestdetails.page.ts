@@ -635,7 +635,7 @@ export class RequestdetailsPage implements OnInit {
     });
   }
   async openFile(url:any,fileName:any){
-    this.fileOpener.open(url+fileName, 'application/*')
+    this.fileOpener.open(url+fileName, 'application/pdf')
       .then(() => console.log('File is opened'))
       .catch(e => alert(JSON.stringify(e)));
   }
